@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu principal</title>
+    <script src="js/utilidadesp1.js"></script>
+</head>
+<body>
+    <script>
+
+        tituloPrincipal = NodoConTexto("h1", "Bienvenido al sitio de Deadpool")
+        introduccionTexto = NodoConTexto("p", "Explora las siguientes páginas para conocer más sobre Deadpool y sus frases memorables")
+        seccionMenu = NodoConTexto("h2", "Menú de navegación")
+
+        listaNavegacion = Nodo("ul")
+        lista1 = NodoConTexto("li","")
+        lista2 = NodoConTexto("li","")
+        enlacePersonajes = crearNodoEnlace("Personajes Principales", "html/ejercicio1.html", "_blank")
+        enlaceFrases = crearNodoEnlace("Frases Memorables", "html/pagina2.html.", "_blank")
+
+        agregarNodoAContenedor(enlacePersonajes, lista1)
+        agregarNodoAContenedor(enlaceFrases, lista2)
+        agregarNodoAContenedor(lista1, listaNavegacion)
+        agregarNodoAContenedor(lista2, listaNavegacion)
+
+        seccionDescripcion = NodoConTexto("h2", "¿Quién es Deadpool?")
+
+        descripcionParrafo = Nodo("p")
+        textoDescripcion1 = document.createTextNode("Deadpool, también conocido como ")
+        textoDescripcion2 = NodoConTexto("strong","Wade Wilson")
+        textoDescripcion3 = document.createTextNode(", es un anti-héroe de marvel conocido por su humor sarcástico y sus habilidades de combate.")
+    
+        agregarNodoAContenedor(textoDescripcion1,descripcionParrafo)
+        agregarNodoAContenedor(textoDescripcion2,descripcionParrafo)
+        agregarNodoAContenedor(textoDescripcion3,descripcionParrafo)
+
+        agregarNodoABody(tituloPrincipal)
+        agregarNodoABody(introduccionTexto)
+        agregarNodoABody(seccionMenu)
+        agregarNodoABody(listaNavegacion)
+        agregarNodoABody(seccionDescripcion)
+        agregarNodoABody(descripcionParrafo)
+        Imagen("recursos/imagen1.jpg","imagen del trailer de la pelicula Deadpool and Wolwerine", "300","170")
+
+
+    </script>
+</body>
+</html>

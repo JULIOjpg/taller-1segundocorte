@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fases memorables</title>
+    <script src="../js/utilidadesp1.js"></script>
+</head>
+<body>
+    <script>
+
+        tituloFrases = NodoConTexto("h1", "Frases memorables de Deadpool")
+        introduccionFrases = NodoConTexto("p", "Deadpool es conocido por su ingenio rápido y su sentido del humor único. Aquí hay algunas de sus frases más memorables.")
+        tituloCitas = NodoConTexto("h2", "Citas Famosas")
+        notaFrases = NodoConTexto("p", "Nota: Cada una de estas frases captura perfectamente el espíritu sarcástico y subversivo de Deadpool.")
+        tituloVideo = NodoConTexto("h2", "Video de las Mejores Escenas")
+        
+
+        listaFrases = Nodo("ul")
+        frases1 = NodoConTexto("li", "Maximum effort!")
+        frases2 = NodoConTexto("li", "I'm about to do to you what Limp Bizkit did to music in the late 90s.")
+        frases3 = NodoConTexto("li", "You're probably thinking, 'This was a superhero movie but that guy in the suit just turned that other guy into a kebab!'")
+
+        agregarNodoAContenedor(frases1, listaFrases)
+        agregarNodoAContenedor(frases2, listaFrases)
+        agregarNodoAContenedor(frases3, listaFrases)
+
+        agregarNodoABody(tituloFrases)
+        agregarNodoABody(introduccionFrases)
+        agregarNodoABody(tituloCitas)
+        agregarNodoABody(listaFrases)
+        agregarNodoABody(notaFrases)
+        agregarNodoABody(tituloVideo)
+        Video("../recursos/video.mp4", 360, 639, true, false)
+
+    </script>
+</body>
+</html>
